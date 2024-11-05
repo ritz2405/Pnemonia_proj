@@ -32,7 +32,8 @@ class DataIngestion:
             self.get_data_from_s3()
             data_ingestion_artifact: DataIngestionArtifact = DataIngestionArtifact(
                 train_file_path=self.data_ingestion_config.train_data_path,
-                test_file_path=self.data_ingestion_config.test_data_path
+                test_file_path=self.data_ingestion_config.test_data_path,
+                val_file_path = self.data_ingestion_config.val_data_path
             )
             logging.info(
                 "Exited the initiate_data_ingestion method of Data ingestion class"
